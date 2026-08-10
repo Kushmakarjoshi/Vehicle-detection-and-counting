@@ -1,0 +1,18 @@
+[project]
+name = "vehicle-detection"
+version = "0.1.0"
+description = "Simple Django site for uploading a YOLO model and image to run vehicle detection"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "django>=5.0",
+    "ultralytics>=8.2.0",
+    "pillow>=10.0",
+    "numpy==1.26.4",
+    "opencv-python-headless==4.8.1.78",
+]
+
+[project.scripts]
+start = "vehicle_detection:main"
+
+[tool.uv]
+package = false
